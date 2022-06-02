@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Wheel
+{% endblock %}
+
+{% block main %}
+    <div class='step_image' style="height: 250%">
+            <form action="/wheel" method="post" class="step_card" style="margin: 30px auto, color: #b13b3b !important;">
+                <select class="custom-select" name="area" style="width: 90%; margin: 5px auto;">
+                    <option selected>Select an area</option>
+                    <option value="Leisure">Leisure</option>
+                    <option>Environment</option>
+                    <option>Health</option>
+                    <option>Career</option>
+                    <option>Personal Development</option>
+                    <option>Relationships</option>
+                    <option>Romance</option>
+                    <option>Finance</option>
+                </select>
+
+                <div class="form-group" style ="margin: 5px auto; text-align: center;">
+                    <span>Enter level of satisfaction:  </span><input autocomplete="off" autofocus class="form-control"  name="value" placeholder="Level" type="number" min="0" max="100" step="10">
+                </div>
+
+                <div class="form-group">
+                    <button class="custom_button" style="max-width: 30%; font-size: 16px; font-family: Impact, Charcoal, sans-serif; text-align: center; background-color: white; color:#b13b3b;" type="submit">
+                      <div class="hoverbutton">Update</div>
+                  </button>
+                </div>
+            </form>
+
+        <canvas id="myChart" style="max-width= 70%; height: auto; background-color: white; padding: 10px;"></canvas>
+
+        <form action="/leisure">
+            <div class='step_card'>
+                <div class='card_text'> Done? Time to figure out where to make a change!</div>
+                <button class="custom_button" style="max-width: 50%; font-size: 16px; font-family: Impact, Charcoal, sans-serif; text-align: center; background-color: white; color:#b13b3b; margin: 10px auto;" type="submit">
+                    <div class="hoverbutton">Find key areas</div>
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Leisure', 'Environment', 'Health', 'Career', 'Personal Development', 'Relationships', 'Romance', 'Finance'],
+                    datasets:
+                    [{
+                        label: 'Life Wheel',
+                        backgroundColor: 'rgb(177, 59, 59, .6)',
+                        borderColor: 'rgb(177, 59, 59)',
+                        data: [{{leisure}}, {{environment}}, {{health}}, {{career}}, {{personal_dev}}, {{relationships}}, {{romance}}, {{finance}}]
+                    }]
+                    },
+
+                // Configuration options go here
+                options: {
+                    scale:
+                    {
+                        ticks:
+                        {
+                            max: 100,
+                            min: 0,
+                            stepSize: 10
+                        }
+                    }
+
+                }
+            });
+
+
+
+        </script>
+
+{% endblock %}

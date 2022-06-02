@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Plan
+{% endblock %}
+
+{% block main %}
+<form action="/plan" method="post">
+    <div class='step_image'>
+        <div class="center">
+            <h1 class="hugr1">Congrats, {{fname}}!</h1>
+            <hr>
+            <h2 class="subtitle"><strong>You've taken the first step on improving your life.</strong></h2>
+            <h2 class="subtitle">Keep scrolling, it only takes three steps!</h2>
+        </div>
+    </div>
+    <div class='content'>
+
+        <div class='step_header' style="color: #b13b3b">
+            Step 1: Set a goal
+        </div>
+        <div class='step_card'>
+            <div class='card_text'> I will have improved my</div>
+            <select class="custom-select" name="area" style="width: 90%; margin: 5px auto;">
+                    <option selected>Select an area</option>
+                    <option value="Leisure">Leisure</option>
+                    <option>Environment</option>
+                    <option>Health</option>
+                    <option>Career</option>
+                    <option>Personal Development</option>
+                    <option>Relationships</option>
+                    <option>Romance</option>
+                    <option>Finance</option>
+                </select>
+
+            <div class='card_text'> when I achieve the following:</div>
+
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="goal" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class='content' style="top: 200%; background-color: #b13b3b;">
+        <div class='step_header' style="color: white">
+            Step 2: Set a date
+        </div>
+        <div class='step_card'>
+            <div class='card_text'> For my plan to be succesful I must have achieved my goal by:</div>
+            <div class="form-group">
+                <input autocomplete="off" class="form-control" name="date" placeholder="YYYY-MM-DD" type="date">
+            </div>
+        </div>
+    </div>
+    <div class='content' style="top: 300%; background-color: #white;">
+        <div class='step_header' style="color: #b13b3b; margin-bottom: 0px">
+            Step 3: Create a map
+        </div>
+        <hr style="background-color: #black; opacity: 0.8">
+        <div class='card_text' style="margin: 0px auto 30px; padding: 10px;"> Make a clear guide of actions needed. Most times we dont know what the first step is, so let's start with the last step.</div>
+
+        <div class='step_card'>
+            <div class='card_text'> In order to achieve my goal, what needs to happen immediatly before achieving it?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class='content2' style="top: 400%; background-color: #b13b3b;">
+        <div class='step_header' style="color: white;  margin-bottom: 0px">
+            Continue
+        </div>
+        <hr>
+        <div class='card_text' style="margin: 0px auto 30px; padding: 10px; color:white">Keep going, use this logic until you've reached something that can be done <strong>today</strong>!</div>
+
+        <div class='step_card'>
+            <div class='card_text'> And what needs to happen immediatly before my last step?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step1" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class='step_card'>
+            <div class='card_text'> What about immediatly before that?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step2" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class='card_text' style="margin: 30px auto 0px; padding: 10px; color:white;">Done? You can create your plan anytime by pressing this button!</div>
+        <div class="form-group">
+            <button class="custom_button" style="max-width: 100%; font-size: 16px; font-family: Impact, Charcoal, sans-serif; text-align: center;" type="submit"><div class="hoverbutton">Create plan</div></button>
+        </div>
+        <div class='card_text' style="margin: 0px auto 30px; padding: 10px; color:white;">Otherwise just keep going and come back here when you're done!</div>
+
+        <div class='step_card'>
+            <div class='card_text'> And before that?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step3" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class='step_card'>
+            <div class='card_text'> Annnnnnnnnd before that?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step4" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class='step_card'>
+            <div class='card_text'> Hmm interesting, and before that?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step5" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class='step_card'>
+            <div class='card_text'> Wow, and before that?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step6" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class='step_card'>
+            <div class='card_text'> And before that?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step7" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class='step_card'>
+            <div class='card_text'> Sounds good, and before that?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step8" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class='step_card'>
+            <div class='card_text'> Incredible, you're so thorough in your plan building! And before that?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step9" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class='step_card'>
+            <div class='card_text'> Ok, last one! You ready? Here it comes... And what needs to happen before that?</div>
+            <div class="form-group">
+                <textarea class="form-control" style="width: 90%; margin: 5px auto;" name="last_step10" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button class="custom_button" style="max-width: 100%; font-size: 16px; font-family: Impact, Charcoal, sans-serif; text-align: center;" type="submit"><div class="hoverbutton">Create plan</div></button>
+        </div>
+    </div>
+    </form>
+{% endblock %}

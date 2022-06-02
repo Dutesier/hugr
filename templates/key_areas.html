@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Key Areas
+{% endblock %}
+
+{% block main %}
+<div class="image" style="height:300%">
+    <div class='step_header' style="color: white; font-size: 4vw;">
+        These are the areas that when improved will have the greatest impact on your life:
+    </div>
+
+    {% for key in listOfKeys %}
+        {% if key == "leisure" %}
+        <div class="step_card">Leisure</div>
+        {% endif %}
+
+        {% if key == "relationships" %}
+        <div class="step_card">Relationships</div>
+        {% endif %}
+
+        {% if key == "environment" %}
+        <div class="step_card">Environment</div>
+        {% endif %}
+
+        {% if key == "health" %}
+        <div class="step_card">Health</div>
+        {% endif %}
+
+        {% if key == "career" %}
+        <div class="step_card">Career</div>
+        {% endif %}
+
+        {% if key == "personal_dev" %}
+        <div class="step_card">Personal Development</div>
+        {% endif %}
+
+        {% if key == "romance" %}
+        <div class="step_card">Romance</div>
+        {% endif %}
+
+        {% if key == "finance" %}
+        <div class="step_card">Finance</div>
+        {% endif %}
+    {% endfor %}
+
+    <div class="step_card">
+        <div class='card_text'> Something different? You can always go again!</div>
+        <form action="/leisure">
+            <button class="custom_button" style="max-width: 30%; font-size: 12px; font-family: Impact, Charcoal, sans-serif; text-align: center; background-color: white; color:#b13b3b;" type="submit">
+                <div class="hoverbutton">Find key areas</div>
+            </button>
+        </form>
+    </div>
+
+    <div class="step_card">
+        <div class='card_text'> Sounds good? Let's do something about it!</div>
+        <form action="/new_plan">
+            <button class="custom_button" style="max-width: 30%; font-size: 12px; font-family: Impact, Charcoal, sans-serif; text-align: center; background-color: white; color:#b13b3b;" type="submit">
+                <div class="hoverbutton">New plan</div>
+            </button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

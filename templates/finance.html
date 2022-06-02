@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Finance
+{% endblock %}
+
+{% block main %}
+<div class="image" >
+    <div class='step_header' style="color: white; font-size: 4vw; margin-bottom: 0px">
+        Finance, {{level}}% satisfied
+    </div>
+
+    <hr style="background-color: #white; opacity: 0.8">
+        <div class='card_text' style="margin: 0px auto 30px; padding: 10px; color: white"> {{fname}}, if you were 100% satisfied with this area of your life, what other areas would improve?</div>
+
+
+
+    <div class="step_card">
+    <form class="form-group" action="/key_areas" method="post">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name="area" id="leisure">
+                <label class="form-check-label" for="leisure">
+                    Leisure
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name="area" id="environment">
+                <label class="form-check-label" for="defaultCheck2">
+                    Environment
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name="area" id="health" >
+                <label class="form-check-label" for="health">
+                    Health
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name="area" id="career" >
+                <label class="form-check-label" for="career">
+                    Career
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name="area" id="personal_dev" >
+                <label class="form-check-label" for="personal_dev">
+                    Personal Development
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name="area" id="relationships" >
+                <label class="form-check-label" for="relationships">
+                    Relationships
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name="area" id="romance" >
+                <label class="form-check-label" for="romance">
+                    Romance
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name="area" id="finance" disabled>
+                <label class="form-check-label" for="finance">
+                    Finance
+                </label>
+        </div>
+
+        <div class="form-group">
+                    <button class="custom_button" style="max-width: 100%; font-size: 14px; font-family: Impact, Charcoal, sans-serif; text-align: center;" type="submit"><div class="hoverbutton">Submit</div></button>
+                </div>
+    </form>
+    </div>
+
+
+</div>
+
+{% endblock %}

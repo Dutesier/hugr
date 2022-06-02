@@ -1,0 +1,9 @@
+@font-face 
+{
+    font-family: "Open Sans";
+    src: url("/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+}
+
+p.customfont { 
+    font-family: "My Custom Font", Verdana, Tahoma;
+}
